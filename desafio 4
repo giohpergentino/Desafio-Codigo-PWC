@@ -1,0 +1,2 @@
+const input = "hello. how are you? i’m fine, thank you.";
+const capitalizedString = input.replace(/(^\w|\.\s\w)/g);
