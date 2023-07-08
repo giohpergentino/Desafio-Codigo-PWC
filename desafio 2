@@ -1,2 +1,5 @@
 const input = "Hello, World!";
-const uniqueCharacters = [...new Set(input)];
+
+const uniqueCharacters = [...new Set(input)].join("");
+
+console.log(uniqueCharacters);
