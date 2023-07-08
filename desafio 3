@@ -1,16 +1,16 @@
-function expandAroundCenter(s, left, right) {
-    while (left >= 0 && right < s.length && s[left] === s[right]) {
+function expandAroundCenter(a, left, right) {
+    while (left >= 0 && right < a.length && a[left] === a[right]) {
       left--;
       right++;
     }
-    return s.slice(left + 1, right);
+    return a.slice(left + 1, right);
   }
   
-  function longestPalindrome(s) {
+  function longestPalindrome(a) {
     let longest = "";
-    for (let i = 0; i < s.length; i++) {
-      let palindromeOdd = expandAroundCenter(s, i, i);
-      let palindromeEven = expandAroundCenter(s, i, i + 1);
+    for (let i = 0; i < a.length; i++) {
+      let palindromeOdd = expandAroundCenter(a, i, i);
+      let palindromeEven = expandAroundCenter(a, i, i + 1);
       
       if (palindromeOdd.length > longest.length) {
         longest = palindromeOdd;
@@ -22,3 +22,10 @@ function expandAroundCenter(s, left, right) {
     }
     return longest;
   }
+  
+  const input = "babad";
+  
+  const longestPalindromicSubstring = longestPalindrome(input);
+
+  console.log(longestPalindromicSubstring);
+  
