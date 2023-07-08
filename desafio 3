@@ -6,5 +6,19 @@ function expandAroundCenter(s, left, right) {
     return s.slice(left + 1, right);
   }
   
- 
-  
+  function longestPalindrome(s) {
+    let longest = "";
+    for (let i = 0; i < s.length; i++) {
+      let palindromeOdd = expandAroundCenter(s, i, i);
+      let palindromeEven = expandAroundCenter(s, i, i + 1);
+      
+      if (palindromeOdd.length > longest.length) {
+        longest = palindromeOdd;
+      }
+      
+      if (palindromeEven.length > longest.length) {
+        longest = palindromeEven;
+      }
+    }
+    return longest;
+  }
