@@ -6,4 +6,16 @@ function isAnagramOfPalindrome(str) {
       const char = str[i];
       charCount[char] = (charCount[char] || 0) + 1;
     }
-}
+  
+    for (let count of Object.values(charCount)) {
+      if (count % 2 !== 0) {
+        oddCount++;
+      }
+      if (oddCount > 1) {
+        return false;
+      }
+    }
+  
+    return true;
+  }
+  
