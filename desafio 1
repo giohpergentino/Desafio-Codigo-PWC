@@ -1,0 +1,2 @@
+const input = "Hello, world! OpenAI is amazing";
+const reversed = input.split(" ");
