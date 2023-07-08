@@ -19,3 +19,9 @@ function isAnagramOfPalindrome(str) {
     return true;
   }
   
+  const input = "racecar";
+
+  const isAnagramPalindrome = isAnagramOfPalindrome(input);
+  
+  console.log(isAnagramPalindrome);
+  
